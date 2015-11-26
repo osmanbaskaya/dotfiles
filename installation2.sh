@@ -32,4 +32,7 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 cp thorn.zsh-theme ~/.oh-my-shell/themes/
 sudo chsh -s `which zsh`
 
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
 echo "Backup downloads completed. Check Downloads Folder"
