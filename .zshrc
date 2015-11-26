@@ -69,7 +69,7 @@ alias ll='ls -lh'
 alias lt='ls --sort=time -1 | head '
 alias size_all='ls | xargs -I file du -sh file'
 
-alias free="free -m "
+alias free="free -h"
 alias egrep='egrep --color=auto -n '
 alias grep='grep --color=auto '
 alias pssp='ps -eo uname,%cpu,%mem,fname,pid | sort -nk2'
@@ -88,13 +88,6 @@ alias gitWS="cd ~/Dropbox/workspace/"
 alias son3="ls -ltr | tail -3"
 alias son5="ls -ltr | tail -5"
 alias son="ls -ltr | tail -1"
-alias usense="cd ~/playground/usense/run/"
-alias goscript="cd ~/playground/task13/src/scripts"
-alias run="cd ~/playground/task13/run"
-alias task13="cd ~/playground/task13/"
-alias ans="cd ~/playground/task13/run/trial/word/ans"
-alias word="cd ~/playground/task13/run/trial/word"
-alias geval="cd ~/playground/task13/run/eval/"
 alias cp='cp -i'
 alias mv='mv -i'
 #alias rm='trash-put -v'
@@ -121,17 +114,9 @@ ztail() {if [ "$#" -ne 2 ]; then
         }
 zwc() { zcat "$1" | wc -l; }
 
-## PATH ADDING ##
-#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home
-
 # Macbook related:
-alias vim="gvim -v"
-
-export ES_HOME="/Users/thorn/dev/elasticsearch/elasticsearch-1.4.2"
-export PATH=$ES_HOME/bin:$JAVA_HOME/bin:$PATH
+#alias vim="gvim -v"
 
 export LC_ALL=en_US.UTF-8  
-#export LC_ALL='C'
 export LANG=en_US.UTF-8
 set -o vi
-
