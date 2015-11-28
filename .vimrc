@@ -1,4 +1,4 @@
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 call pathogen#helptags()
 syntax on
 filetype plugin indent on
@@ -75,9 +75,7 @@ else
 endif
 
 set t_Co=256
-let g:molokai_original = 0
-
-
+let g:molokai_original = 1
 
 map <A-1> :tabn 1<CR>
 map <A-2> :tabn 2<CR>
