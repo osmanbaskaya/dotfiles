@@ -103,7 +103,6 @@ alias zcat='gunzip -c'
 alias bss="byobu-select-session"
 alias cs="top -b -n 1 | awk 'NR > 7 {a[\$2]+=\$9;}END{for (i in a) if ( a[i] != 0 ) print i\"\t\"a[i]}'"
 alias ms="top -b -n 1 | awk 'NR > 7 {a[\$2]+=\$10;}END{for (i in a) if ( a[i] != 0 ) print i\"\t\"a[i]}'"
-alias ssh="ssh -X"
 
 # Functions:
 zhead() {if [ "$#" -ne 2 ]; then
@@ -127,11 +126,8 @@ zwc() { zcat "$1" | wc -l; }
 # Macbook related:
 alias vim="gvim -v"
 
-export ES_HOME="/Users/thorn/dev/elasticsearch/elasticsearch-1.4.2"
-export PATH=$ES_HOME/bin:$JAVA_HOME/bin:$PATH
-
 export LC_ALL=en_US.UTF-8  
-#export LC_ALL='C'
 export LANG=en_US.UTF-8
 set -o vi
 
+export PATH="/home/obaskaya/anaconda2/bin:$PATH"

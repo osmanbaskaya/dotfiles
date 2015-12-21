@@ -3,7 +3,7 @@
 sudo apt-get update
 
 
-packages=("git nautilus-dropbox zsh unzip unrar vlc xchat vim vim-gnome python-pip gimp deluge goldendict tree htop wget gitk mumble mumble-server weka curl ssh trash-cli build-essential autoconf libtool pkg-config"); 
+packages=("git nautilus-dropbox zsh unzip unrar vlc xchat vim vim-gnome python-pip gimp deluge tree htop wget gitk mumble mumble-server weka curl ssh trash-cli build-essential autoconf libtool pkg-config"); 
 pypackages=("virtualenv");
 pypackagesU=("ipython");
 
@@ -30,9 +30,13 @@ mkdir -p ~/.vimbackup/swap
 
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 cp thorn.zsh-theme ~/.oh-my-zsh/themes/
-chsh -s `which zsh`
+cp .zshrc ~
+cp molokai.vim ~/.vim/color
+cp .theanorc ~
 
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
+
+chsh -s `which zsh`
 echo "Backup downloads completed. Check Downloads Folder"
