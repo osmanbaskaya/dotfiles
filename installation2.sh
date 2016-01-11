@@ -3,7 +3,7 @@
 sudo apt-get update
 
 
-packages=("git nautilus-dropbox zsh unzip unrar vlc xchat vim vim-gnome python-pip gimp deluge tree htop wget gitk mumble mumble-server weka curl ssh trash-cli build-essential autoconf libtool pkg-config"); 
+packages=("git nautilus-dropbox zsh unzip unrar vlc xchat vim vim-gnome python-pip gimp deluge tree htop wget gitk mumble mumble-server weka curl ssh trash-cli build-essential autoconf libtool pkg-config httpie nmap"); 
 pypackages=("virtualenv");
 pypackagesU=("ipython");
 
