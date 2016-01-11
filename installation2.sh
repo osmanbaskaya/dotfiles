@@ -35,8 +35,14 @@ cp molokai.vim ~/.vim/color
 cp .theanorc ~
 
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
+# jekyll install
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+rvm get stable
+rvm use stable
+rvm rubygems latest
+gem install jekyll
+jekyll -v
 
 chsh -s `which zsh`
 echo "Backup downloads completed. Check Downloads Folder"
