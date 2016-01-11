@@ -129,6 +129,7 @@ alias vim="gvim -v"
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
 set -o vi
+alias j="jump"
 
 export PATH="/home/obaskaya/anaconda2/bin:$PATH"
 export LD_LIBRARY_PATH=/usr/local/cuda-7.5/lib64/:$LD_LIBRARY_PATH 
