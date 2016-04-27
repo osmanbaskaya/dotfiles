@@ -31,7 +31,8 @@ mkdir -p ~/.vimbackup/swap
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 cp thorn.zsh-theme ~/.oh-my-zsh/themes/
 cp .zshrc ~
-cp molokai.vim ~/.vim/color
+mkdir -p ~/.vim/colors
+cp molokai.vim ~/.vim/colors
 cp .theanorc ~
 
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
