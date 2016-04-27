@@ -46,3 +46,6 @@ jekyll -v
 
 chsh -s `which zsh`
 echo "Backup downloads completed. Check Downloads Folder"
+
+# fish like autocomplete
+git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions

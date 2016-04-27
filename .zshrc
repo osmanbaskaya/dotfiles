@@ -42,9 +42,10 @@ ZSH_THEME="thorn"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git python django ssh-agent cp mosh vi-mode zsh-navigation-tools gitignore nmap httpie jump)
+plugins=(git python django ssh-agent cp mosh vi-mode zsh-navigation-tools gitignore nmap httpie jump zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
 
 # Customize to your needs...
 
