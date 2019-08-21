@@ -1,0 +1,9 @@
+[run]
+branch = True
+omit = venv/*
+[report]
+show_missing = True
+skip_covered = True
+omit = venv/*
+[html]
+directory = coveragereport

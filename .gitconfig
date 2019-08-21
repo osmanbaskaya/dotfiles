@@ -1,5 +1,65 @@
+[alias]
+	# checkout
+    co = checkout
+	cob = checkout -b
+	# commit
+	c = commit
+	ca = commit -a
+	cm = commit -m
+	cam = commit -am
+	# diff
+	d = diff
+	dp = diff --patience
+	dc = diff --cached
+	dk = diff --check
+	dck = diff --cached --check
+	dt = difftool
+	dct = difftool --cached
+	# fetch
+	f = fetch
+	fo = fetch origin
+	fu = fetch upstream
+    # grep
+	g = grep -p
+	# log
+	l = log --oneline
+	lg = log --oneline --graph --decorate
+	# ls
+	ls = ls-files
+	lsf = !git ls-files | grep -i
+	# Push
+	ps = push
+	pso = push origin
+	psom = push origin master
+	# Pull
+	pl = pull
+	pb = pull --rebase
+	pbum = pull --rebase upstream master
+	# status
+	s = status
+	ss = status -s 
+	su = status -u no  # no untracked files 
+[core]
+	editor = vim
+	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+[web]
+	browser = google-chromeo
+[color]
+	ui = auto
+[color "branch"]
+	current = yellow bold
+	local = green bold
+	remote = cyan bold
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[color "status"]
+	changed = yellow
+	;added = green bold
+	;untracked = red bold
 [user]
-	name = osmanbaskaya
 	email = thyme.exe@gmail.com
-[push]
-	default = simple
+	name = Osman Baskaya

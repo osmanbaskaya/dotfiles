@@ -6,7 +6,6 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="thorn"
-#ZSH_THEME="michelebologna"
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="random"
 
@@ -43,7 +42,7 @@ ZSH_THEME="thorn"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-extras python django ssh-agent cp mosh vi-mode zsh-navigation-tools gitignore nmap httpie jump zsh-autosuggestions)
+plugins=(git python django ssh-agent cp mosh vi-mode zsh-navigation-tools gitignore nmap httpie jump zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
@@ -90,6 +89,13 @@ alias gitWS="cd ~/Dropbox/workspace/"
 alias son3="ls -ltr | tail -3"
 alias son5="ls -ltr | tail -5"
 alias son="ls -ltr | tail -1"
+alias usense="cd ~/playground/usense/run/"
+alias goscript="cd ~/playground/task13/src/scripts"
+alias run="cd ~/playground/task13/run"
+alias task13="cd ~/playground/task13/"
+alias ans="cd ~/playground/task13/run/trial/word/ans"
+alias word="cd ~/playground/task13/run/trial/word"
+alias geval="cd ~/playground/task13/run/eval/"
 alias cp='cp -i'
 alias mv='mv -i'
 #alias rm='trash-put -v'
@@ -99,12 +105,6 @@ alias bss="byobu-select-session"
 alias cs="top -b -n 1 | awk 'NR > 7 {a[\$2]+=\$9;}END{for (i in a) if ( a[i] != 0 ) print i\"\t\"a[i]}'"
 alias ms="top -b -n 1 | awk 'NR > 7 {a[\$2]+=\$10;}END{for (i in a) if ( a[i] != 0 ) print i\"\t\"a[i]}'"
 alias msync="rsync --progress -avhz"
-alias top="htop"
-alias svenv='source venv/bin/activate'
-# OSX Only
-# FIXME: check osx with uname and add if statement for following alias comands
-alias shuf="gshuf"
-
 
 # Functions:
 zhead() {if [ "$#" -ne 2 ]; then
@@ -133,7 +133,8 @@ export LANG=en_US.UTF-8
 set -o vi
 alias j="jump"
 
-export PATH="$HOME/anaconda3/bin:$HOME/playground/owl/bin/:$PATH"
+export PATH="$HOME/anaconda2/bin:$PATH"
+export LD_LIBRARY_PATH=/usr/local/cuda-7.5/lib64/:$LD_LIBRARY_PATH 
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-source ~/.iterm2_shell_integration.zsh
+
