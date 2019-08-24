@@ -20,6 +20,9 @@ git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zs
 #chsh -s `which zsh`
 echo "Backup downloads completed. Check Downloads Folder"
 
+# inputrc
+ln -s .inputrc ~/.inputrc
+
 ### byobu config copy. ###
 set +e
 mkdir -p $HOME/.byobu

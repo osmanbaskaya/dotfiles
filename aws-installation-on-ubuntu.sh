@@ -48,3 +48,13 @@ sudo service docker restart
 
 # aws credentials
 # https://stackoverflow.com/questions/33297172/boto3-error-botocore-exceptions-nocredentialserror-unable-to-locate-credential
+
+# umount
+# sudo lsof +f -- /mnt/data # to understand which processes make the disk busy.
+
+# ssh login - no root
+mkdir .ssh
+chmod 700 .ssh
+touch .ssh/authorized_keys
+chmod 600 .ssh/authorized_keys
+cat >> .ssh/authorized_keys # print your ssh public key
