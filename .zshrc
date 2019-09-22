@@ -72,8 +72,7 @@ alias lt='ls --sort=time -1 | head '
 alias size_all='ls | xargs -I file du -sh file'
 
 alias free="free -m "
-alias egrep='egrep --color=auto -n '
-alias grep='grep --color=auto '
+alias grep='grep --color=auto -n'
 alias pssp='ps -eo uname,%cpu,%mem,fname,pid | sort -nk2'
 alias pssm='ps -eo uname,%cpu,%mem,fname,pid | sort -nk3'
 alias pss='ps -eo uname,%cpu,%mem,fname,pid'
@@ -101,9 +100,11 @@ alias ms="top -b -n 1 | awk 'NR > 7 {a[\$2]+=\$10;}END{for (i in a) if ( a[i] !=
 alias msync="rsync --progress -avhz"
 alias top="htop"
 alias svenv='source venv/bin/activate'
+alias plock="pipenv lock --pre"
 # OSX Only
 # FIXME: check osx with uname and add if statement for following alias comands
 alias shuf="gshuf"
+alias sed="gsed"
 
 
 # Functions:
