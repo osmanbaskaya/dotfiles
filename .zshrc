@@ -134,7 +134,7 @@ export LANG=en_US.UTF-8
 set -o vi
 alias j="jump"
 
-export PATH="$HOME/anaconda3/bin:$HOME/playground/owl/bin/:$PATH"
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 source ~/.iterm2_shell_integration.zsh
+export PATH="/usr/local/opt/curl/bin:$PATH"
+[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
