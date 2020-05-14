@@ -43,7 +43,7 @@ ZSH_THEME="thorn"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-extras python django ssh-agent cp mosh vi-mode zsh-navigation-tools gitignore nmap httpie jump zsh-autosuggestions)
+plugins=(git git-extras python django ssh-agent cp mosh vi-mode zsh-navigation-tools gitignore nmap httpie jump zsh-autosuggestions kubectl history)
 
 source $ZSH/oh-my-zsh.sh
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
@@ -72,7 +72,7 @@ alias lt='ls --sort=time -1 | head '
 alias size_all='ls | xargs -I file du -sh file'
 
 alias free="free -m "
-alias grep='grep --color=auto -n'
+alias grep='grep --color=auto'
 alias pssp='ps -eo uname,%cpu,%mem,fname,pid | sort -nk2'
 alias pssm='ps -eo uname,%cpu,%mem,fname,pid | sort -nk3'
 alias pss='ps -eo uname,%cpu,%mem,fname,pid'
@@ -136,5 +136,28 @@ alias j="jump"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 source ~/.iterm2_shell_integration.zsh
-export PATH="/usr/local/opt/curl/bin:$PATH"
+#export PATH="/usr/local/opt/curl/bin:$PATH"
 [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/usr/local/lib/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/lib/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/usr/local/lib/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/local/lib/google-cloud-sdk/completion.zsh.inc'; fi
+
+### Added by Zinit's installer
+if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
+    print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
+    command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
+        print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
+        print -P "%F{160}▓▒░ The clone has failed.%f%b"
+fi
+
+source "$HOME/.zinit/bin/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+### End of Zinit's installer chunk
+#
+zplugin light jonmosco/kube-ps1
+PROMPT='$(kube_ps1)'$PROMPT

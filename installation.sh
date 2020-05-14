@@ -13,6 +13,7 @@ git clone https://github.com/scrooloose/nerdcommenter.git $VIM/my_plugins/nerdco
 sh -c "$(curl -fsSL https://raw.github.com/osmanbaskaya/oh-my-zsh/master/tools/install.sh)"
 cp thorn.zsh-theme ~/.oh-my-zsh/themes/
 cp .zshrc ~
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 
 # fish like autocomplete
 git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions
