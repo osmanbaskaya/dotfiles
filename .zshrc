@@ -6,7 +6,6 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="thorn"
-#ZSH_THEME="michelebologna"
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="random"
 
@@ -43,19 +42,19 @@ ZSH_THEME="thorn"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-extras python django ssh-agent cp mosh vi-mode zsh-navigation-tools gitignore nmap httpie jump zsh-autosuggestions kubectl history)
+plugins=(git git-prompt git-extras python ssh-agent cp mosh vi-mode zsh-navigation-tools gitignore nmap httpie jump zsh-autosuggestions kubectl history)
 
 source $ZSH/oh-my-zsh.sh
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
 
 # Customize to your needs...
 
-TZ="Europe/Istanbul"
+TZ="America/Los_Angeles"
 HISTFILE=$HOME/.zhistory
 HISTSIZE=1000000
 SAVEHIST=1000000
 HOSTNAME="`hostname`"
-PAGER='less'
+PAGER='vim'
 EDITOR='vim'
 set -o vi
 
@@ -89,7 +88,7 @@ alias gitWS="cd ~/Dropbox/workspace/"
 alias son3="ls -ltr | tail -3"
 alias son5="ls -ltr | tail -5"
 alias son="ls -ltr | tail -1"
-alias cp='cp -i'
+alias cp='cp -ir'
 alias mv='mv -i'
 #alias rm='trash-put -v'
 
@@ -98,9 +97,12 @@ alias bss="byobu-select-session"
 alias cs="top -b -n 1 | awk 'NR > 7 {a[\$2]+=\$9;}END{for (i in a) if ( a[i] != 0 ) print i\"\t\"a[i]}'"
 alias ms="top -b -n 1 | awk 'NR > 7 {a[\$2]+=\$10;}END{for (i in a) if ( a[i] != 0 ) print i\"\t\"a[i]}'"
 alias msync="rsync --progress -avhz"
-alias top="htop"
 alias svenv='source venv/bin/activate'
 alias plock="pipenv lock --pre"
+alias dimg="docker images | grep -v none"
+alias venv_active='path=$(ls -a | ggrep "\..*venv*" | head -1); echo "$path""/bin/activate"'
+alias deac=deactivate
+
 # OSX Only
 # FIXME: check osx with uname and add if statement for following alias comands
 alias shuf="gshuf"
@@ -123,6 +125,9 @@ ztail() {if [ "$#" -ne 2 ]; then
         }
 zwc() { zcat "$1" | wc -l; }
 
+venv() { source `venv_active` ; }
+
+
 ## PATH ADDING ##
 #export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home
 
@@ -131,7 +136,6 @@ zwc() { zcat "$1" | wc -l; }
 
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
-set -o vi
 alias j="jump"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
@@ -161,3 +165,6 @@ autoload -Uz _zinit
 #
 zplugin light jonmosco/kube-ps1
 PROMPT='$(kube_ps1)'$PROMPT
+kubeoff
+
+source /usr/local/lib/google-cloud-sdk/path.zsh.inc

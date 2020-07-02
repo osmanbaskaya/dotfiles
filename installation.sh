@@ -7,7 +7,12 @@ mkdir -p $VIM/colors
 cp molokai.vim $VIM/colors
 bash $VIM/install_awesome_vimrc.sh
 cp ob.vim $VIM/vimrcs/
+
+# plugins
 git clone https://github.com/scrooloose/nerdcommenter.git $VIM/my_plugins/nerdcommenter.git
+git clone https://github.com/stephpy/vim-yaml.git $VIM/my_plugins/vim-yaml.git
+git clone https://github.com/sjl/gundo.vim $VIM/my_plugins/gundo.git
+
 
 ### zsh related ###
 sh -c "$(curl -fsSL https://raw.github.com/osmanbaskaya/oh-my-zsh/master/tools/install.sh)"
@@ -17,6 +22,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/i
 
 # fish like autocomplete
 git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions
+cp .gcloud-project.txt $HOME
 
 #chsh -s `which zsh`
 echo "Backup downloads completed. Check Downloads Folder"
@@ -50,4 +56,4 @@ git config --global color.diff.new        "green bold"
 git config --global color.diff.whitespace "red reverse"
 
 brew install jid
-bew install jq
+brew install jq
