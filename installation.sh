@@ -24,6 +24,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/i
 git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions
 cp .gcloud-project.txt $HOME
 
+# thefuck
+brew install thefuck
+
 #chsh -s `which zsh`
 echo "Backup downloads completed. Check Downloads Folder"
 

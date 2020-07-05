@@ -42,7 +42,7 @@ ZSH_THEME="thorn"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-prompt git-extras python ssh-agent cp mosh vi-mode zsh-navigation-tools gitignore nmap httpie jump zsh-autosuggestions kubectl history)
+plugins=(git git-prompt git-extras python ssh-agent cp mosh vi-mode zsh-navigation-tools gitignore nmap httpie jump zsh-autosuggestions kubectl history thefuck)
 
 source $ZSH/oh-my-zsh.sh
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
@@ -54,8 +54,8 @@ HISTFILE=$HOME/.zhistory
 HISTSIZE=1000000
 SAVEHIST=1000000
 HOSTNAME="`hostname`"
-PAGER='vim'
-EDITOR='vim'
+PAGER='less'
+EDITOR='vi'
 set -o vi
 
 # # --------------------------------------------------------------------
