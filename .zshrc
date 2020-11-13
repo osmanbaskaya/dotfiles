@@ -168,3 +168,6 @@ PROMPT='$(kube_ps1)'$PROMPT
 kubeoff
 
 source /usr/local/lib/google-cloud-sdk/path.zsh.inc
+
+setopt share_history
+setopt autocd
