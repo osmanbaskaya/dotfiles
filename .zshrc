@@ -171,3 +171,5 @@ source /usr/local/lib/google-cloud-sdk/path.zsh.inc
 
 setopt share_history
 setopt autocd
+eval "$(mcfly init zsh)"
+eval "$(zoxide init zsh --cmd cd)"

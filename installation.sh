@@ -60,3 +60,10 @@ git config --global color.diff.whitespace "red reverse"
 
 brew install jid
 brew install jq
+brew install fzf
+brew install broot
+
+brew tap cantino/mcfly
+brew install mcfly
+
+brew install zoxide
