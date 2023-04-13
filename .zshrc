@@ -42,7 +42,7 @@ ZSH_THEME="thorn"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-prompt git-extras python ssh-agent cp mosh vi-mode zsh-navigation-tools gitignore nmap httpie jump zsh-autosuggestions kubectl history thefuck)
+plugins=(git git-prompt git-extras python ssh-agent cp mosh vi-mode zsh-navigation-tools gitignore nmap httpie jump zsh-autosuggestions history thefuck osx dotenv)
 
 source $ZSH/oh-my-zsh.sh
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
@@ -141,7 +141,7 @@ alias j="jump"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 source ~/.iterm2_shell_integration.zsh
 #export PATH="/usr/local/opt/curl/bin:$PATH"
-[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+#[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/usr/local/lib/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/lib/google-cloud-sdk/path.zsh.inc'; fi
@@ -163,11 +163,11 @@ autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 ### End of Zinit's installer chunk
 #
-zplugin light jonmosco/kube-ps1
-PROMPT='$(kube_ps1)'$PROMPT
-kubeoff
+#zplugin light jonmosco/kube-ps1
+#PROMPT='$(kube_ps1)'$PROMPT
+#kubeoff
 
-source /usr/local/lib/google-cloud-sdk/path.zsh.inc
+#source /usr/local/lib/google-cloud-sdk/path.zsh.inc
 
 setopt share_history
 setopt autocd

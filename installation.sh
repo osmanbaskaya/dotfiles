@@ -15,25 +15,27 @@ git clone https://github.com/sjl/gundo.vim $VIM/my_plugins/gundo.git
 
 
 ### zsh related ###
-sh -c "$(curl -fsSL https://raw.github.com/osmanbaskaya/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 cp thorn.zsh-theme ~/.oh-my-zsh/themes/
 cp .zshrc ~
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 
 # fish like autocomplete
-git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions
 cp .gcloud-project.txt $HOME
 
 # thefuck
 brew install thefuck
 
-#chsh -s `which zsh`
+chsh -s `which zsh`
 echo "Backup downloads completed. Check Downloads Folder"
 
 # inputrc
 ln -s .inputrc ~/.inputrc
 
 ### byobu config copy. ###
+
+brew install byobu
 set +e
 mkdir -p $HOME/.byobu
 cp byobu.tmux.conf ~/.byobu/tmux.conf
@@ -59,6 +61,7 @@ git config --global color.diff.new        "green bold"
 git config --global color.diff.whitespace "red reverse"
 
 brew install jid
+brew install httpie
 brew install jq
 brew install fzf
 brew install broot
@@ -67,3 +70,5 @@ brew tap cantino/mcfly
 brew install mcfly
 
 brew install zoxide
+brew install grep  # ggrep
+brewn install npm
