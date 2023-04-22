@@ -1,7 +1,0 @@
-[compute]
-region = us-west1
-zone = us-west1-a
-[core]
-account = my-email@gmail.com
-disable_usage_reporting = True
-project = my-project-name
