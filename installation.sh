@@ -72,3 +72,5 @@ brew install mcfly
 brew install zoxide
 brew install grep  # ggrep
 brewn install npm
+brew install htop
+brew isntall macvim
