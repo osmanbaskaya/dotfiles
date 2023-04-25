@@ -1,6 +1,6 @@
 [alias]
 	# checkout
-    co = checkout
+  co = checkout
 	cob = checkout -b
 	# commit
 	c = commit
@@ -15,6 +15,7 @@
 	dck = diff --cached --check
 	dt = difftool
 	dct = difftool --cached
+  ds = diff --stat
 	# fetch
 	f = fetch
 	fo = fetch origin
@@ -39,9 +40,11 @@
 	s = status
 	ss = status -s 
 	su = status -u no  # no untracked files 
+	change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f"
 [core]
 	editor = vim
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [web]
 	browser = google-chromeo
 [color]
@@ -61,5 +64,5 @@
 	;added = green bold
 	;untracked = red bold
 [user]
-	email = thyme.exe@gmail.com
+	email = osmanbaskaya1@gmail.com
 	name = Osman Baskaya
